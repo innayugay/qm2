@@ -1,0 +1,87 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.0.4.min.css" type="text/css" />
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.js"></script>
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.0.4.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="a575722e-0a08-4429-ae76-8f512e7264ea" data-root-id="1052"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="1133">
+          {"f9b6a7b3-9cbc-48cf-8c9d-825f7e212fbc":{"roots":{"references":[{"attributes":{"dimension":1,"plot":{"id":"1003","subtype":"Figure","type":"Plot"},"ticker":{"id":"1019","type":"BasicTicker"}},"id":"1022","type":"Grid"},{"attributes":{},"id":"1026","type":"SaveTool"},{"attributes":{"callback":{"id":"1048","type":"CustomJS"},"options":["Public interest"],"title":"Variable: ","value":"Public interest"},"id":"1050","type":"Select"},{"attributes":{"children":[{"id":"1050","type":"Select"},{"id":"1049","type":"Slider"}]},"id":"1051","type":"WidgetBox"},{"attributes":{"children":[{"id":"1003","subtype":"Figure","type":"Plot"},{"id":"1051","type":"WidgetBox"}]},"id":"1052","type":"Column"},{"attributes":{},"id":"1055","type":"BasicTickFormatter"},{"attributes":{},"id":"1057","type":"BasicTickFormatter"},{"attributes":{},"id":"1058","type":"Selection"},{"attributes":{},"id":"1059","type":"UnionRenderers"},{"attributes":{"callback":null,"data":{"url":["https://d-maps.com/m/europa/uk/royaumeuni/royaumeuni56.gif"]},"selected":{"id":"1058","type":"Selection"},"selection_policy":{"id":"1059","type":"UnionRenderers"}},"id":"1038","type":"ColumnDataSource"},{"attributes":{"anchor":"bottom_left","h":{"units":"data","value":700},"url":{"field":"url"},"w":{"units":"data","value":500},"x":{"value":0},"y":{"value":0}},"id":"1039","type":"ImageURL"},{"attributes":{"formatter":{"id":"1057","type":"BasicTickFormatter"},"plot":{"id":"1003","subtype":"Figure","type":"Plot"},"ticker":{"id":"1019","type":"BasicTicker"},"visible":false},"id":"1018","type":"LinearAxis"},{"attributes":{},"id":"1019","type":"BasicTicker"},{"attributes":{},"id":"1014","type":"BasicTicker"},{"attributes":{"plot":{"id":"1003","subtype":"Figure","type":"Plot"},"ticker":{"id":"1014","type":"BasicTicker"}},"id":"1017","type":"Grid"},{"attributes":{},"id":"1011","type":"LinearScale"},{"attributes":{"formatter":{"id":"1055","type":"BasicTickFormatter"},"plot":{"id":"1003","subtype":"Figure","type":"Plot"},"ticker":{"id":"1014","type":"BasicTicker"},"visible":false},"id":"1013","type":"LinearAxis"},{"attributes":{},"id":"1024","type":"WheelZoomTool"},{"attributes":{},"id":"1027","type":"ResetTool"},{"attributes":{"anchor":"bottom_left","h":{"units":"data","value":700},"url":{"field":"url"},"w":{"units":"data","value":500},"x":{"value":0},"y":{"value":0}},"id":"1040","type":"ImageURL"},{"attributes":{"overlay":{"id":"1031","type":"BoxAnnotation"}},"id":"1025","type":"BoxZoomTool"},{"attributes":{"source":{"id":"1038","type":"ColumnDataSource"}},"id":"1042","type":"CDSView"},{"attributes":{"data_source":{"id":"1038","type":"ColumnDataSource"},"glyph":{"id":"1039","type":"ImageURL"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1040","type":"ImageURL"},"selection_glyph":null,"view":{"id":"1042","type":"CDSView"}},"id":"1041","type":"GlyphRenderer"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"plot":null,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"1031","type":"BoxAnnotation"},{"attributes":{"source":{"id":"1001","type":"ColumnDataSource"}},"id":"1047","type":"CDSView"},{"attributes":{"data_source":{"id":"1001","type":"ColumnDataSource"},"glyph":{"id":"1044","type":"Circle"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1045","type":"Circle"},"selection_glyph":null,"view":{"id":"1047","type":"CDSView"}},"id":"1046","type":"GlyphRenderer"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"size":{"field":"size","units":"screen"},"x":{"field":"x"},"y":{"field":"y"}},"id":"1045","type":"Circle"},{"attributes":{"fill_alpha":{"field":"opacity"},"fill_color":{"field":"color"},"line_color":{"field":"color"},"size":{"field":"size","units":"screen"},"x":{"field":"x"},"y":{"field":"y"}},"id":"1044","type":"Circle"},{"attributes":{},"id":"1061","type":"UnionRenderers"},{"attributes":{},"id":"1060","type":"Selection"},{"attributes":{"callback":{"id":"1048","type":"CustomJS"},"end":2017,"start":2008,"title":"Year","value":2008},"id":"1049","type":"Slider"},{"attributes":{"args":{"selector":{"id":"1050","type":"Select"},"sliders":{"id":"1049","type":"Slider"},"source":{"id":"1001","type":"ColumnDataSource"}},"code":"\n      var data = source.data\n      var x = selector.value\n      var f = sliders.value\n      var scale = 60000\n      opacity = data ['opacity']\n      size = data['size']\n      \n\n      if(x == \"Public interest\"){\n \n          if (f == 2008){  \n            size[0] = 52\n            opacity[0] = 0.9\n\n            size[1] = 67\n            opacity[1] = \t0.1451740327\n\n            size[2] = 43\n            opacity[2] = 0.06645296623\n\n            size[3] = 100\n            opacity[3] = 0.04527210483\n\n          }\n          if (f == 2009){  \n            size[0] = 65\n            opacity[0] = 0.9\n\n            size[1] = 87\n            opacity[1] = 0.1483371338\n            \n            size[2] = 62\n            opacity[2] = 0.06620918126\n\n            size[3] = 100\n            opacity[3] = 0.04576431614\n\n          }\n          if (f ==2010){  \n            size[0] = 74\n            opacity[0] = 0.9\n\n            size[1] = 100\n            opacity[1] = 0.1465066964\n                       \n            size[2] = 93\n            opacity[2] = \t0.06532832524\n\n\n            size[3] = 98\n            opacity[3] = 0.04508083363\n\n          }\n          if (f == 2011){  \n            size[0] = 81\n            opacity[0] = 0.9\n\n            size[1] = 100\n            opacity[1] = \t0.1449210152\n            \n            size[2] = 95\n            opacity[2] = 0.06443267078\n\n            size[3] = 91\n            opacity[3] = 0.04455243216\n\n          }\n\n          if (f == 2012){ \n            size[0] = 82\n            opacity[0] = 0.9\n\n            size[1] = 100\n            opacity[1] = 0.1294589056176508\n            \n            size[2] = 89\n            opacity[2] = 0.06012500936\n\n            size[3] = 94\n            opacity[3] = 0.04179915435\n\n          }\n\n          if (f == 2013){  \n            size[0] = 75\n            opacity[0] = 0.9\n\n            size[1] = 100\n            opacity[1] = 0.1344373001\n            \n            size[2] = 86\n            opacity[2] = 0.05833953099\n\n            size[3] = 75\n            opacity[3] = 0.04020158848\n\n          }\n\n          if (f == 2014){ \n            size[0] = 85\n            opacity[0] = 0.9\n\n            size[1] = 96\n            opacity[1] = \t0.1175761581\n            \n            size[2] = 100\n            opacity[2] = 0.05211010864\n\n            size[3] = 78\n            opacity[3] = 0.03580995615\n\n          }\n\n          if (f == 2015){  \n            size[0] = 87\n            opacity[0] = 0.9\n\n            size[1] = 100\n            opacity[1] = 0.1067789834\n            \n            size[2] = 100\n            opacity[2] = \t0.04830235633\n\n            size[3] = 85\n            opacity[3] = 0.03221182165\n\n          }\n\n          if (f == 2016){  \n            size[0] = 88 \n            opacity[0] = 0.9\n\n            size[1] = 93  \n            opacity[1] = 0.09955275499\n            \n            size[2] = 100  \n            opacity[2] = 0.04901361653\n\n            size[3] = 81   \n            opacity[3] = 0.03125056585\n\n          }\n\n          if (f == 2017){\n            size[0] = 87\n            opacity[0] = 0.9\n\n            size[1] = 96\n            opacity[1] = 0.09584029391\n\n            size[2] = 100\n            opacity[2] = 0.04741219821\n\n            size[3] = 90\n            opacity[3] = 0.03095203169\n\n          }\n  \n       }\n        if (x == \"Diagnosis\"){\n          size[0] = scale/5942613942*(-6.54*f**6 + 513.18*f**5 - 15528.74*f**4 + 225681.95*f**3 - 1582335.94*f**2 + 4314667.29*f + 5424331.10)    \n          size[1] = scale/1668326300*(12.88*f**5 - 778.38*f**4 + 16732.87*f**3 - 152386.70*f**2 + 495781.01*f + 958668.48)\n          size[2] = 100\n          size[3] = 100\n              \n        }\n\n\n  source.change.emit();\n\n"},"id":"1048","type":"CustomJS"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"1023","type":"PanTool"},{"id":"1024","type":"WheelZoomTool"},{"id":"1025","type":"BoxZoomTool"},{"id":"1026","type":"SaveTool"},{"id":"1027","type":"ResetTool"},{"id":"1028","type":"HelpTool"}]},"id":"1029","type":"Toolbar"},{"attributes":{},"id":"1028","type":"HelpTool"},{"attributes":{},"id":"1023","type":"PanTool"},{"attributes":{},"id":"1009","type":"LinearScale"},{"attributes":{"callback":null,"end":650},"id":"1007","type":"Range1d"},{"attributes":{"callback":null,"end":1000},"id":"1005","type":"Range1d"},{"attributes":{"below":[{"id":"1013","type":"LinearAxis"}],"left":[{"id":"1018","type":"LinearAxis"}],"plot_height":585,"plot_width":900,"renderers":[{"id":"1013","type":"LinearAxis"},{"id":"1017","type":"Grid"},{"id":"1018","type":"LinearAxis"},{"id":"1022","type":"Grid"},{"id":"1031","type":"BoxAnnotation"},{"id":"1041","type":"GlyphRenderer"},{"id":"1046","type":"GlyphRenderer"}],"title":{"id":"1002","type":"Title"},"toolbar":{"id":"1029","type":"Toolbar"},"toolbar_location":null,"x_range":{"id":"1005","type":"Range1d"},"x_scale":{"id":"1009","type":"LinearScale"},"y_range":{"id":"1007","type":"Range1d"},"y_scale":{"id":"1011","type":"LinearScale"}},"id":"1003","subtype":"Figure","type":"Plot"},{"attributes":{"plot":null,"text":"Public interest in dementia and diagnosis rates across the UK","text_font_size":{"value":"20pt"}},"id":"1002","type":"Title"},{"attributes":{"callback":null,"data":{"color":["maroon","maroon","maroon","maroon"],"label":["England","Scotland","Wales","Northern Ireland"],"opacity":[0,0,0,0],"size":[100,96,90,87],"x":[390,270,270,150],"y":[120,500,180,350]},"selected":{"id":"1060","type":"Selection"},"selection_policy":{"id":"1061","type":"UnionRenderers"}},"id":"1001","type":"ColumnDataSource"}],"root_ids":["1052"]},"title":"Bokeh Application","version":"1.0.4"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('1133').textContent;
+                  var render_items = [{"docid":"f9b6a7b3-9cbc-48cf-8c9d-825f7e212fbc","roots":{"1052":"a575722e-0a08-4429-ae76-8f512e7264ea"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        embed_document(root);
+                        clearInterval(timer);
+                      }
+                      attempts++;
+                      if (attempts > 100) {
+                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        clearInterval(timer);
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
